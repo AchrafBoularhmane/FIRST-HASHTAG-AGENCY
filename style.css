@@ -1,0 +1,2498 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+
+:root {
+  --Primary-color: #ff6600;
+  --Second-color: #000;
+  --Third-color: #fff;
+  --Fourth-color: #141414;
+  --Fifth-color: #adadad;
+  --Sixth-color: #141414f8;
+}
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.StopScrolling {
+  overflow: hidden;
+}
+::-webkit-scrollbar {
+  width: 11px;
+  background-color: var(--Second-color);
+}
+::-webkit-scrollbar-thumb {
+  height: 200px;
+  background: var(--Primary-color);
+}
+input[type="submit"] {
+  font-family: "Font Awesome 5 Free";
+  font-size: 11px;
+  border: none;
+  font-weight: 900;
+  padding: 5px;
+  color: var(--Second-color);
+  background-color: var(--Primary-color);
+}
+.BackToTop {
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 1;
+  z-index: 1000000000000000000;
+  background: var(--Primary-color);
+}
+.BackToTop svg {
+  color: var(--Second-color);
+  width: 50px;
+  height: 50px;
+}
+.Top {
+  bottom: 40px;
+  visibility: visible;
+  opacity: 1;
+}
+.CloseCookies {
+  display: none;
+}
+.Cookies {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: var(--Fourth-color);
+  color: var(--Third-color);
+  padding: 15px 20px;
+  font-size: 14px;
+  text-align: center;
+  max-width: 350px;
+  width: 100%;
+  z-index: 8;
+}
+.Cookies .CookiesContainer {
+  display: block;
+  padding: 5px 0px;
+}
+.Cookies .CookiesContainer h2 {
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  line-height: 5px;
+  font-size: 15px;
+}
+.Cookies .CookiesContainer h2 i {
+  font-size: 14px;
+  margin-left: 7px;
+  color: var(--Primary-color);
+}
+.Cookies .CookiesContainer p {
+  text-align: center;
+  padding: 15px 0px;
+  font-size: 13px;
+  text-align: justify;
+  font-weight: 300;
+  color: var(--Fifth-color);
+}
+.Cookies #CloseCookies {
+  cursor: pointer;
+  position: absolute;
+  right: 7px;
+  top: 5px;
+  font-size: 15px;
+  color: var(--Primary-color);
+}
+.Cookies a {
+  list-style: none;
+  padding: 6px 15px;
+  margin-right: 15px;
+  text-decoration: none;
+  color: var(--Primary-color);
+  font-size: 15px;
+  border-radius: 0;
+  font-weight: 400;
+}
+.Cookies a:hover {
+  background-color: var(--second-color);
+  color: var(--text-white-color);
+}
+.opacity {
+  opacity: 0.06;
+}
+/*Safari phone numbers detection*/
+a[href^="tel"] {
+  text-decoration: inherit;
+  color: inherit;
+}
+.Ios-link {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+/*---------------------------------------------------------------- HOME SECTION -----------------------------------------------------------*/
+
+.HomeSection {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  display: flex;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 10px 60px;
+  margin-top: 10px;
+}
+
+.Logo {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.Logo img {
+  width: 120px;
+  height: 100%;
+}
+.Logo span {
+  font-size: 12px;
+  margin-top: 6px;
+  color: var(--Third-color);
+  margin-left: -5px;
+  font-weight: 400;
+}
+.Logo span span {
+  font-weight: 600;
+}
+header .Nav {
+  width: 70%;
+  float: right;
+  display: flex;
+}
+header .Nav ul {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+}
+header .Nav ul li {
+  list-style: none;
+  margin: auto 0;
+}
+header .Nav ul li a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--Third-color);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+header .Nav ul li a:hover {
+  color: var(--Primary-color);
+}
+.Devis {
+  color: var(--Primary-color) !important;
+  border: 1px solid var(--Primary-color);
+  padding: 12px 26px;
+}
+.Devis:hover {
+  background: var(--Second-color);
+  border: 1px solid var(--Second-color);
+}
+
+.VideoContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.VideoContainer video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.BackgColor {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: var(--Second-color);
+  opacity: 0.7;
+}
+.CircleOne {
+  top: -25%;
+  left: -5%;
+  border: 40px solid var(--Primary-color);
+  width: 400px;
+  height: 400px;
+  z-index: 0;
+}
+.CircleTwo {
+  top: -15%;
+  right: -5%;
+  border: 40px solid var(--Primary-color);
+  width: 400px;
+  height: 300px;
+}
+.CircleThree {
+  bottom: -80px;
+  left: -80px;
+  border: 40px solid var(--Primary-color);
+  width: 250px;
+  height: 250px;
+}
+.CircleCrossCommunStyle {
+  position: absolute;
+  background: transparent;
+  border-radius: 50%;
+}
+.SmallCircleOne {
+  top: 18%;
+  left: 45%;
+  border: 3px solid var(--Primary-color);
+  width: 15px;
+  height: 15px;
+}
+.SmallCircleTwo {
+  bottom: 5%;
+  left: 30%;
+  border: 3px solid var(--Third-color);
+  width: 15px;
+  height: 15px;
+}
+.SmallCircleThree {
+  bottom: 8%;
+  right: 47%;
+  border: 3px solid var(--Third-color);
+  width: 15px;
+  height: 15px;
+}
+.SmallCircleFour {
+  top: 22%;
+  right: 5%;
+  background: var(--Third-color);
+  width: 10px;
+  height: 10px;
+}
+.CrossOne {
+  right: 25%;
+  top: 13%;
+  width: 10px;
+  height: 10px;
+}
+.CrossTwo {
+  right: 25%;
+  bottom: 13%;
+  width: 10px;
+  height: 10px;
+}
+.CrossThree {
+  left: 25%;
+  bottom: 17%;
+  width: 10px;
+  height: 10px;
+}
+
+.CrossBefore:before,
+.CrossAfter:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 15px;
+  width: 4px;
+  background-color: var(--Primary-color);
+}
+.CrossBefore:before {
+  transform: rotate(45deg);
+}
+.CrossAfter:after {
+  transform: rotate(-45deg);
+}
+
+.LandingPageDescription {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: auto;
+  z-index: 1;
+}
+.LandingPageDescriptionContainer {
+  display: flex;
+}
+.DescriptionPart {
+  position: relative;
+  width: 60%;
+  height: 100%;
+}
+.LandingPageDescription .MarketingAgency {
+  position: relative;
+  width: 20%;
+  writing-mode: vertical-lr;
+  display: flex;
+}
+.LandingPageDescription .MarketingAgency span {
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 13px;
+  color: var(--Third-color);
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 0 20px;
+}
+.LandingPageDescription .MarketingAgency span span {
+  color: var(--Primary-color);
+}
+.LandingPageDescription .DescriptionPart .Rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--Primary-color);
+}
+.LandingPageDescription .DescriptionPart .Welcome {
+  color: var(--Third-color);
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: normal;
+  display: inline-block;
+  margin-top: 12px;
+}
+.LandingPageDescription .DescriptionPart span span {
+  color: var(--Primary-color);
+}
+.LandingPageDescription .DescriptionPart h1 {
+  color: var(--Third-color);
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: -8px;
+}
+.LandingPageDescription .DescriptionPart h1 span {
+  color: var(--Primary-color);
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.LandingPageDescription .DescriptionPart p {
+  font-size: 13px;
+  color: var(--Fifth-color);
+  text-align: center;
+  padding-bottom: 7px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 17px;
+}
+.DiscoverLink {
+  text-align: center;
+}
+.DiscoverLink a {
+  padding: 12px 26px;
+  background: var(--Primary-color);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--Second-color);
+  text-transform: uppercase;
+  display: inline-block;
+}
+.DiscoverLink a i {
+  background: var(--Second-color);
+  color: var(--Primary-color);
+  border-radius: 50%;
+  font-size: 13px;
+  padding: 2px;
+  margin-left: 8px;
+}
+.DiscoverLink a:hover {
+  color: var(--Primary-color);
+  background: var(--Second-color);
+}
+.DiscoverLink a:hover i {
+  background: var(--Primary-color);
+  color: var(--Second-color);
+}
+.LandingPageSocialMedia {
+  position: relative;
+  width: 20%;
+  padding: 0 20px;
+}
+.LandingPageSocialMedia ul {
+  padding-bottom: 10px;
+}
+.LandingPageSocialMedia ul li {
+  border-radius: 50%;
+  border: 1px solid var(--Third-color);
+  text-align: center;
+  list-style: none;
+  margin-bottom: 7px;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+}
+.LandingPageSocialMedia ul li:hover {
+  background: var(--Primary-color);
+  border: 1px solid var(--Primary-color);
+}
+.LandingPageSocialMedia ul li:nth-child(2) {
+  background: var(--Primary-color);
+  border: 1px solid var(--Primary-color);
+}
+.LandingPageSocialMedia ul li:last-child {
+  margin-bottom: 0px;
+}
+.LandingPageSocialMedia ul li a {
+  text-decoration: none;
+  display: flex;
+  margin: auto;
+}
+.LandingPageSocialMedia ul li a i {
+  color: var(--Third-color);
+  font-size: 12px;
+  margin: auto;
+}
+.LandingPageSocialMedia .Rectangle {
+  width: 25px;
+  display: flex;
+}
+.LandingPageSocialMedia .Rectangle span {
+  width: 3px;
+  height: 60px;
+  background: var(--Primary-color);
+  display: block;
+  margin: auto;
+}
+.LandingPageSocialMedia .SuivezNous {
+  height: 100%;
+  min-width: 25px;
+  margin-top: 10px;
+  text-align: center;
+}
+.LandingPageSocialMedia .SuivezNous span {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--Third-color);
+  writing-mode: vertical-lr;
+  display: block;
+  text-align: center;
+}
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .LandingPageSocialMedia {
+    width: 5%;
+    padding: 0 0px;
+    margin-left: 5px;
+  }
+  .LandingPageSocialMedia ul li {
+    width: 14px;
+    height: 14px;
+  }
+  .LandingPageSocialMedia ul li a i {
+    font-size: 7px;
+  }
+  .LandingPageSocialMedia .Rectangle {
+    width: 15px;
+    display: flex;
+  }
+  .LandingPageSocialMedia .Rectangle span {
+    width: 1px;
+    height: 40px;
+    background: var(--Primary-color);
+    display: block;
+    margin: auto;
+  }
+
+  .LandingPageSocialMedia .SuivezNous span {
+    font-size: 8px;
+  }
+
+  .LandingPageDescription .MarketingAgency {
+    width: 5%;
+    margin-right: 5px;
+  }
+  .LandingPageDescription .MarketingAgency span {
+    padding: 0 0px;
+    font-size: 8px;
+  }
+  .DescriptionPart {
+    width: 90%;
+    padding: 0 10px;
+  }
+  .LandingPageDescription .DescriptionPart h1,
+  .LandingPageDescription .DescriptionPart h1 span {
+    font-size: 28px;
+  }
+  .LandingPageDescription .DescriptionPart p {
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 14px;
+    padding-bottom: 10px;
+    text-align: left;
+  }
+  .LandingPageDescription .DescriptionPart .Rectangle {
+    width: 30px;
+    height: 1px;
+    margin-left: 10px;
+  }
+  .LandingPageDescription .DescriptionPart .Welcome {
+    font-size: 8px;
+    margin-top: 4px;
+  }
+  .DiscoverLink {
+    text-align: left;
+  }
+  .DiscoverLink a {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  .CircleOne {
+    display: none;
+  }
+  .CircleTwo {
+    top: -80px;
+    right: -80px;
+    border: 40px solid var(--Primary-color);
+    width: 250px;
+    height: 250px;
+  }
+  .Cookies {
+    display: none;
+  }
+}
+/* Medium devices */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .LandingPageSocialMedia {
+    width: 10%;
+  }
+  .DescriptionPart {
+    width: 80%;
+  }
+  .LandingPageDescription .DescriptionPart h1,
+  .LandingPageDescription .DescriptionPart h1 span {
+    font-size: 35px;
+  }
+  .LandingPageDescription .MarketingAgency {
+    width: 10%;
+  }
+  .CircleTwo {
+    top: -80px;
+    right: -80px;
+    border: 40px solid var(--Primary-color);
+    width: 300px;
+    height: 250px;
+  }
+  .CircleOne {
+    top: -80px;
+    left: -80px;
+    border: 40px solid var(--Primary-color);
+    width: 300px;
+    height: 250px;
+  }
+  .DiscoverLink a {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 992px) {
+  .HomeSection {
+    min-height: 100vh;
+  }
+  .LandingPageDescription {
+    height: max-content;
+  }
+  header {
+    padding: 0;
+    height: max-content;
+    margin-top: 0;
+  }
+  .Logo {
+    padding: 10px;
+  }
+  .Logo img {
+    width: 90px;
+    height: 100%;
+  }
+  .Logo span {
+    font-size: 10px;
+    margin-top: 6px;
+    color: var(--Third-color);
+    margin-left: -5px;
+    font-weight: 400;
+  }
+  .Toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 4;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .Toggle span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: var(--Primary-color);
+    width: 45px;
+    height: 2.5px;
+    transition: 0.6s;
+  }
+  .Toggle .One {
+    top: 0;
+  }
+  .Toggle .Two,
+  .Toggle .Three {
+    top: 16px;
+    background: var(--Third-color);
+    width: 40px;
+  }
+  .Toggle .Four {
+    top: 30px;
+    background: var(--Primary-color);
+    width: 35px;
+  }
+  .ShowHamburgerIcon {
+    padding: 18px 19px;
+  }
+  .ShowHamburgerIcon .One,
+  .ShowHamburgerIcon .Four {
+    display: none;
+  }
+  .ShowHamburgerIcon .Two {
+    transform: rotate(45deg);
+    width: 38px;
+    background: var(--Third-color);
+    transition: 2s;
+  }
+  .ShowHamburgerIcon .Three {
+    transform: rotate(-45deg);
+    width: 38px;
+    background: var(--Primary-color);
+    transition: 2s;
+  }
+  .ShowMobileMenu {
+    display: block;
+  }
+  header .Nav {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--Second-color);
+    display: none;
+  }
+  header .Nav.Active {
+    display: flex;
+  }
+  header .Nav ul {
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  header .Nav ul li {
+    padding: 30px 0;
+  }
+
+  header .Nav ul li a {
+    margin: 0;
+    display: block;
+    text-align: center;
+  }
+  .Active {
+    color: var(--Third-color);
+  }
+  .Devis {
+    border: none;
+    padding: 0;
+    color: var(--Primary-color) !important;
+  }
+}
+/* Extra large devices */
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+  .LandingPageSocialMedia {
+    width: 15%;
+  }
+  .DescriptionPart {
+    width: 70%;
+  }
+  .LandingPageDescription .DescriptionPart h1,
+  .LandingPageDescription .DescriptionPart h1 span {
+    font-size: 35px;
+  }
+  .LandingPageDescription .MarketingAgency {
+    width: 15%;
+  }
+  .Logo {
+    width: 20%;
+  }
+  header .Nav {
+    width: 80%;
+  }
+  .CircleTwo {
+    top: -80px;
+    right: -80px;
+    border: 40px solid var(--Primary-color);
+    width: 400px;
+    height: 250px;
+  }
+  .CircleOne {
+    top: -80px;
+    left: -80px;
+    border: 40px solid var(--Primary-color);
+    width: 400px;
+    height: 250px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .FixNavbar {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    margin-top: 0px;
+    height: max-content;
+    z-index: 100000000000000000000000000000000000000000000000000000000;
+    background: rgba(1, 1, 1, 0.808);
+  }
+  .FixNavbar .Nav ul li .Devis:hover {
+    background-color: var(--Primary-color);
+    color: var(--Second-color) !important;
+  }
+}
+/*--------------------------------------------------------------- ABOUT SECTION  -----------------------------------------------------------*/
+.AboutSection {
+  position: relative;
+  background: var(--Fourth-color);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+.SectionPadding {
+  padding: 100px 60px;
+}
+.AboutSection .AboutText {
+  width: 50%;
+  height: 100%;
+  padding: 50px;
+}
+.AboutSection .AboutPictures {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.AboutSection .AboutPictures .Picture1 {
+  width: 100%;
+  height: 300px;
+  z-index: 1;
+}
+.AboutSection .AboutPictures .AboutPictures2,
+.AboutSection .AboutPictures .AboutPictures3 {
+  width: 100%;
+  display: flex;
+}
+.AboutSection .AboutPictures .AboutPictures3 .Content {
+  position: relative;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-top: -40px;
+  width: 150px;
+  height: 200px;
+  z-index: 2;
+}
+.AboutSection .AboutPictures .AboutPictures2 .Content {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -150px;
+  width: 150px;
+  height: 200px;
+  z-index: 2;
+}
+.AboutSection .AboutPictures .AboutPictures2 .Content .OrangeBackg,
+.AboutSection .AboutPictures .AboutPictures3 .Content .OrangeBackg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--Primary-color);
+  opacity: 0.8;
+}
+
+.AboutSection .AboutPictures .AboutPictures2 .Content .Picture3,
+.AboutSection .AboutPictures .AboutPictures3 .Content .Picture2 {
+  width: 100%;
+  height: 100%;
+}
+.SmallTitleRectangle {
+  width: 30px;
+  height: 2px;
+  margin-bottom: 5px;
+  margin-left: 14px;
+  background-color: var(--Primary-color);
+}
+.SmallTitle {
+  font-size: 10px;
+  font-weight: 400;
+  margin-left: 14px;
+  color: var(--Primary-color);
+  text-transform: uppercase;
+}
+.BigTitle {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.BigTitle .Rectangle {
+  width: 4px;
+  height: 70px;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0px;
+  background-color: var(--Primary-color);
+}
+.BigTitle .Title {
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--Third-color);
+  text-transform: uppercase;
+  margin: auto 0;
+}
+.Title Span {
+  color: var(--Primary-color);
+}
+.SectionDescriptionText {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--Fifth-color);
+  padding: 10px 0;
+}
+.AboutText .EmailAbout span i,
+.AboutText .PhoneAbout span i {
+  font-size: 14px;
+  color: var(--Primary-color);
+  margin-right: 10px;
+}
+.AboutText .EmailAbout,
+.AboutText .PhoneAbout {
+  display: flex;
+  padding: 5px 0;
+}
+.AboutText .EmailAbout span,
+.AboutText .PhoneAbout span {
+  font-size: 14px;
+  color: var(--Fifth-color);
+}
+.BottomRectangle {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: var(--Primary-color);
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .AboutSection {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .SectionPadding {
+    padding: 100px 15px;
+  }
+  .AboutSection .AboutText {
+    width: 100%;
+    padding: 50px 0px;
+  }
+  .AboutSection .AboutPictures {
+    width: 100%;
+  }
+  .AboutSection .AboutPictures .AboutPictures3 .Content {
+    width: 100px;
+    height: 200px;
+  }
+  .AboutSection .AboutPictures .AboutPictures2 .Content {
+    margin-bottom: -100px;
+    width: 100px;
+    height: 200px;
+  }
+  .BigTitle .Title {
+    font-size: 20px;
+  }
+}
+/* Medium devices */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .AboutSection {
+    min-height: 100%;
+  }
+  .SectionPadding {
+    padding: 100px 15px;
+  }
+  .AboutSection .AboutText {
+    width: 100%;
+    padding: 50px 10px;
+  }
+  .AboutSection .AboutPictures {
+    width: 100%;
+  }
+  .BigTitle .Title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 992px) {
+}
+/* Extra large devices */
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+  .AboutSection {
+    min-height: 100%;
+  }
+}
+/* /*--------------------------------------------------------------- SERVICES SECTION  -----------------------------------------------------------*/
+
+.ServicesSection {
+  position: relative;
+  background: var(--Sixth-color);
+  width: 100%;
+  min-height: 100vh;
+}
+.AllServices {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 0fr;
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.ServicesDescription {
+  grid-area: 1 / 1 / 2 / 4;
+  padding-right: 150px;
+}
+.ServicesDescription .BigTitle {
+  width: 80%;
+  height: max-content;
+}
+.ServiceContainer {
+  padding: 20px;
+  position: relative;
+}
+.Service2 {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.ServiceContainer .ServiceImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.4;
+}
+.ServiceContainer .Service {
+  position: relative;
+  z-index: 3;
+  color: var(--Third-color);
+  display: flex;
+  flex-direction: column;
+}
+.ServiceContainer .Service h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 600;
+  z-index: 3;
+  margin: 10px 0px;
+  text-align: center;
+}
+.ServiceContainer .Service p {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  z-index: 3;
+  text-align: center;
+}
+.ServiceContainer .Service .ServiceIcon {
+  width: 45px;
+  height: 45px;
+  color: var(--Primary-color);
+  margin: auto;
+}
+.ServiceContainer .ServiceBackgrColor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--Primary-color);
+  z-index: 2;
+  opacity: 0.7;
+}
+.Service3 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.Service4 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.Service5 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.Service6 {
+  grid-area: 2 / 4 / 3 / 5;
+}
+.Service7 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.Service8 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.Service9 {
+  grid-area: 3 / 3 / 4 / 4;
+}
+.Service10 {
+  grid-area: 3 / 4 / 4 / 5;
+  position: relative;
+}
+.Service10Style {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  background: var(--Primary-color);
+  width: 100%;
+  height: 50px;
+}
+.ServiceContainer .ServiceBackgrColor2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--Fourth-color);
+  z-index: 2;
+}
+.ServiceContainer .ServiceBackgrColor3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--Primary-color);
+  z-index: 2;
+  opacity: 0.7;
+}
+.ContactPart {
+  display: flex;
+  margin-top: 50px;
+  position: relative;
+}
+.ContactPart .BigTitle {
+  width: 40%;
+  position: relative;
+}
+.ContactPart .SectionDescriptionText {
+  width: 40%;
+  margin: auto;
+}
+.ContactPart .ContactPartButton {
+  width: 20%;
+  margin: auto;
+}
+.BigTitle .Circle {
+  position: absolute;
+  top: -40%;
+  left: 40%;
+  transform: translate(-40%);
+  border: 25px solid var(--Primary-color);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+.ServicesSection .ContactPart .TopRectangle {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 20px;
+  height: 2px;
+  background: var(--Primary-color);
+}
+.ServicesSection .SmallCircleOne {
+  top: 5%;
+  left: 30%;
+}
+.ServicesSection .SmallCircleTwo {
+  bottom: 5%;
+  left: 30%;
+  border: 3px solid var(--Primary-color);
+}
+.ServicesSection .SmallCircleThree {
+  bottom: 8%;
+}
+.ServicesSection .SmallCircleFour {
+  top: 50%;
+  background: var(--Primary-color);
+}
+.ServicesSection .CrossOne {
+  left: 1%;
+  top: 35%;
+}
+.ServicesSection .CrossTwo {
+  right: 10%;
+  bottom: 50%;
+}
+.ServicesSection .CrossThree {
+  left: 50%;
+  bottom: 25%;
+}
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .AllServices {
+    display: grid;
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) repeat(3, 0fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .ServicesDescription {
+    grid-area: 1 / 1 / 1 / 3;
+    margin-bottom: 20px;
+    padding-right: 0px;
+  }
+  .ServicesDescription .BigTitle {
+    width: 100%;
+  }
+  .Service2 {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+  .Service3 {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+  .Service4 {
+    grid-area: 4 / 1 / 5 / 3;
+  }
+  .Service5 {
+    grid-area: 5 / 1 / 6 / 3;
+  }
+  .Service6 {
+    grid-area: 6 / 1 / 7 / 3;
+  }
+  .Service7 {
+    grid-area: 7 / 1 / 8 / 3;
+  }
+  .Service8 {
+    grid-area: 8 / 1 / 9 / 3;
+  }
+  .Service9 {
+    grid-area: 9 / 1 / 10 / 3;
+  }
+  .Service10 {
+    grid-area: 10 / 1 / 11 / 3;
+  }
+  .ServiceContainer .Service h5 {
+    font-size: 15px;
+  }
+  .ServiceContainer {
+    padding: 10px;
+    display: flex;
+  }
+  .ServiceContainer .Service {
+    margin: auto;
+  }
+  .ContactPart {
+    display: flex;
+    flex-direction: column;
+  }
+  .ContactPart .BigTitle {
+    width: 100%;
+  }
+  .ContactPart .SectionDescriptionText {
+    width: 100%;
+    margin: auto;
+  }
+  .ContactPart .ContactPartButton {
+    width: 100%;
+    margin: auto;
+  }
+}
+/* Medium devices */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .ServicesDescription {
+    padding-right: 20px;
+  }
+  .AllServices {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) repeat(3, 0fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .ServiceContainer {
+    display: flex;
+  }
+  .ServiceContainer .Service {
+    margin: auto;
+  }
+  .ServicesDescription {
+    grid-area: 1 / 1 / 2 / 2;
+    margin-bottom: 20px;
+    padding-right: 0px;
+  }
+  .ServicesDescription .BigTitle {
+    width: 100%;
+  }
+  .Service2 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .Service3 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .Service4 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .Service5 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .Service6 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+  .Service7 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .Service8 {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+  .Service9 {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+  .Service10 {
+    grid-area: 5 / 2 / 6 / 3;
+  }
+}
+@media (max-width: 992px) {
+}
+/* Extra large devices */
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+}
+/*--------------------------------------------------------------- WORKFLOW SECTION  -----------------------------------------------------------*/
+.WorkflowSection {
+  position: relative;
+  background: var(--Fourth-color);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.WorkflowSection .CircleThree {
+  border: 30px solid var(--Fifth-color);
+  bottom: -80px;
+  left: -80px;
+  width: 200px;
+  height: 200px;
+}
+.SectionDescription {
+  padding: 0 350px;
+}
+.SectionDescription .SmallTitleRectangle {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+.SectionDescription .BigTitle {
+  display: block;
+  position: relative;
+}
+.SectionDescription .BigTitle .Circle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 25px solid var(--Third-color);
+}
+.SectionDescription .BigTitle .Title,
+.SectionDescription .SectionDescriptionText {
+  text-align: center;
+}
+.WorkflowContainer {
+  margin: auto;
+  display: flex;
+  width: 100%;
+}
+.WorkflowContainer .Workflow {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.WorkflowContainer .Step5 {
+  padding-top: 0px;
+}
+.WorkflowContainer .Step4 {
+  padding-top: 20px;
+}
+.WorkflowContainer .Step3 {
+  padding-top: 40px;
+}
+.WorkflowContainer .Step2 {
+  padding-top: 60px;
+}
+.WorkflowContainer .Step1 {
+  padding-top: 80px;
+}
+.WorkflowContainer .Workflow .Number {
+  color: var(--Primary-color);
+  font-size: 85px;
+  font-weight: 600;
+  line-height: 100px;
+  text-align: center;
+}
+.WorkflowContainer .Workflow .Step {
+  color: var(--Third-color);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+.WorkflowSection .SmallCircleOne {
+  top: 5%;
+  left: 30%;
+}
+.WorkflowSection .SmallCircleTwo {
+  bottom: 5%;
+  left: 30%;
+  border: 3px solid var(--Primary-color);
+}
+.WorkflowSection .SmallCircleThree {
+  bottom: 8%;
+}
+.WorkflowSection .SmallCircleFour {
+  top: 50%;
+  background: var(--Primary-color);
+}
+.WorkflowSection .CrossOne {
+  left: 1%;
+  top: 35%;
+}
+.WorkflowSection .CrossTwo {
+  right: 10%;
+  bottom: 5%;
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .SectionDescription {
+    padding: 0px;
+  }
+  .WorkflowContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .WorkflowContainer .Step3,
+  .WorkflowContainer .Step2,
+  .WorkflowContainer .Step1,
+  .WorkflowContainer .Step4,
+  .WorkflowContainer .Step5 {
+    padding-top: 0px;
+  }
+  .WorkflowContainer .Workflow .Step {
+    text-align: center;
+    font-size: 20px;
+  }
+  .WorkflowContainer .Workflow .Number {
+    font-size: 60px;
+  }
+  .WorkflowContainer .Workflow {
+    margin-top: 20px;
+  }
+}
+/* Medium devices */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .WorkflowContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .WorkflowSection {
+    min-height: 100%;
+  }
+  .SectionDescription {
+    padding: 0 100px;
+  }
+  .WorkflowContainer .Workflow .Step {
+    text-align: center;
+    font-size: 22px;
+  }
+  .WorkflowContainer .Workflow .Number {
+    font-size: 60px;
+  }
+}
+@media (max-width: 992px) {
+}
+/* Extra large devices */
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+  .SectionDescription {
+    padding: 0 100px;
+  }
+  .WorkflowContainer .Workflow .Step {
+    text-align: center;
+    font-size: 25px;
+  }
+  .WorkflowContainer .Workflow .Number {
+    font-size: 80px;
+  }
+}
+
+/*--------------------------------------------------------------- TESTIMONIALS SECTION  -----------------------------------------------------------*/
+.TestimonialsSection {
+  position: relative;
+  background: var(--Sixth-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.TestimonialsSection .ContactPart {
+  margin-top: 0px;
+}
+.TestimonialsSection .SmallCircleOne {
+  top: 5%;
+  left: 30%;
+}
+.TestimonialsSection .SmallCircleTwo {
+  bottom: 5%;
+  left: 30%;
+  border: 3px solid var(--Primary-color);
+}
+.TestimonialsSection .SmallCircleThree {
+  bottom: 8%;
+}
+.TestimonialsSection .SmallCircleFour {
+  top: 50%;
+  background: var(--Primary-color);
+}
+.TestimonialsSection .CrossOne {
+  left: 1%;
+  top: 35%;
+}
+.TestimonialsSection .CrossTwo {
+  right: 10%;
+  bottom: 50%;
+}
+.TestimonialsSection .CrossThree {
+  left: 50%;
+  bottom: 25%;
+}
+.TestimonialsMap {
+  display: flex;
+  margin: auto;
+  width: 100%;
+}
+.SliderContainer {
+  position: relative;
+}
+.SliderContainer,
+.Map {
+  padding: 90px;
+  width: 50%;
+}
+.owl-item {
+  padding: 30px;
+  z-index: 10;
+  background: var(--Fourth-color);
+}
+.owl-theme .owl-dots .owl-dot span {
+  border-radius: 0px !important;
+  background: var(--Fifth-color) !important;
+  width: 20px !important;
+  height: 5px !important;
+}
+.owl-theme .owl-dots .active span {
+  background: var(--Primary-color) !important;
+}
+.barre1 {
+  height: 10px;
+  width: 100%;
+  background: var(--Primary-color);
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+}
+.barre2 {
+  height: 10px;
+  width: 100%;
+  background: var(--Primary-color);
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+.Content {
+  display: flex;
+  flex-direction: column;
+}
+.Content .QuotesIcon {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+}
+.Content p {
+  color: var(--Fifth-color);
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  padding: 20px 0;
+}
+.Content h2 {
+  color: var(--Primary-color);
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .TestimonialsMap {
+    display: flex;
+    flex-direction: column;
+  }
+  .SliderContainer,
+  .Map {
+    padding: 0px;
+    width: 100%;
+    margin: 50px 0px;
+  }
+  .owl-carousel {
+    width: 100%;
+  }
+  .owl-item {
+    padding: 20px;
+    background: var(--Fourth-color);
+  }
+}
+/* Medium devices */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .TestimonialsSection {
+    min-height: 100%;
+  }
+  .SliderContainer,
+  .Map {
+    padding: 50px;
+  }
+  .SliderContainer,
+  .Map {
+    padding: 90px 15px;
+    width: 50%;
+  }
+}
+@media (max-width: 992px) {
+}
+/* Extra large devices */
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+  .SliderContainer,
+  .Map {
+    padding: 50px;
+  }
+}
+
+/*--------------------------------------------------------------- BRANDS SECTION  -----------------------------------------------------------*/
+.BrandsSection {
+  position: relative;
+  background: var(--Fourth-color);
+  display: flex;
+  padding: 20px 60px;
+}
+.BrandsSection .ContactPart {
+  margin-top: 0px;
+  width: 35%;
+}
+.BrandsSection .ContactPart .BigTitle {
+  width: 100%;
+  position: relative;
+  display: flex;
+  margin: auto;
+}
+
+.BrandsSection .SliderContainer {
+  margin: auto;
+  padding: 0px;
+  width: 65%;
+}
+.BrandsSection .SliderContainer .owl-carousel .owl-item .ContentArea .Content .QuotesIcon {
+  width: 170px;
+  height: 50px;
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .BrandsSection {
+    flex-direction: column;
+    padding: 40px 15px;
+  }
+  .BrandsSection .ContactPart {
+    width: 100%;
+  }
+  .BrandsSection .SliderContainer {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .BrandsSection .SliderContainer .owl-carousel .owl-item {
+    padding: 0;
+  }
+}
+/* Medium devices */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .BrandsSection .SliderContainer .owl-carousel .owl-item {
+    padding: 0;
+  }
+  .BrandsSection {
+    padding: 20px 15px;
+  }
+}
+@media (max-width: 992px) {
+}
+/* Extra large devices */
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+  .BrandsSection .SliderContainer .owl-carousel .owl-item {
+    padding: 0;
+  }
+}
+
+/*--------------------------------------------------------------- BLOG SECTION  -----------------------------------------------------------*/
+.BlogSection {
+  position: relative;
+  background: var(--Sixth-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.BlogSection .SmallCircleOne {
+  top: 5%;
+  left: 30%;
+}
+.BlogSection .SmallCircleTwo {
+  bottom: 5%;
+  left: 30%;
+  border: 3px solid var(--Primary-color);
+}
+.BlogSection .SmallCircleThree {
+  bottom: 8%;
+}
+.BlogSection .SmallCircleFour {
+  top: 50px;
+  background: var(--Primary-color);
+}
+.BlogSection .CrossOne {
+  left: 1%;
+  top: 35%;
+}
+.BlogSection .CrossTwo {
+  right: 10%;
+  bottom: 50%;
+}
+.BlogSection .CrossThree {
+  left: 50%;
+  bottom: 25%;
+}
+.BlogSection .SectionDescription .SmallTitle {
+  text-align: center;
+}
+.BlogSection .SliderContainer {
+  width: 100%;
+  padding: 50px;
+}
+.BlogSection .SliderContainer .owl-stage .owl-item .ContentArea .Content .QuotesIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.BlogSection .SliderContainer .owl-stage .owl-item .ContentArea .Content .Desactivate {
+  display: none;
+}
+.BlogSection .SliderContainer .owl-stage .owl-item .ContentArea .Content .BlackBackg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--Second-color);
+  opacity: 0.6;
+  z-index: 2;
+}
+.BlogSection .SliderContainer .owl-stage .owl-item .ContentArea .Content p {
+  z-index: 3;
+  color: var(--Third-color);
+  text-align: left;
+}
+.BlogSection .SliderContainer .owl-stage .owl-item .ContentArea .Content h2 {
+  z-index: 3;
+  color: var(--Third-color);
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.BlogSection .SliderContainer .owl-stage .owl-item .ContentArea .Content h3 {
+  z-index: 3;
+  color: var(--Fifth-color);
+  text-align: left;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.BlogSection .SliderContainer .owl-stage .owl-item .ContentArea .Content .Middle {
+  color: var(--Primary-color);
+}
+.BlogSection .SliderContainer .owl-stage .owl-item .ContentArea .Content .ReadMore {
+  z-index: 3;
+  cursor: pointer;
+  padding: 5px 0px;
+}
+.BlogSection .SliderContainer .owl-stage .owl-item .ContentArea .Content .ReadMore a {
+  text-decoration: none;
+  color: var(--Primary-color);
+  text-transform: capitalize;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.BlogSection .SliderContainer .owl-stage .owl-item .ContentArea .Content .ReadMore a i {
+  font-size: 12px;
+}
+.BlogSection .SliderContainer .owl-stage .owl-item .ContentArea .Content .Border {
+  width: 100%;
+  height: 1px;
+  background: var(--Primary-color);
+  z-index: 3;
+  margin-bottom: 5px;
+}
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .BlogSection .SliderContainer {
+    width: 100%;
+    padding: 20px;
+  }
+}
+/* Medium devices */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .BlogSection {
+    min-height: 100%;
+  }
+  .BlogSection .SliderContainer {
+    width: 100%;
+    padding: 90px 20px;
+  }
+}
+@media (max-width: 992px) {
+}
+/* Extra large devices */
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+  .BlogSection {
+    min-height: 100%;
+  }
+  .BlogSection .SliderContainer {
+    padding: 30px 0px;
+  }
+}
+
+/*--------------------------------------------------------------- CONTACT SECTION  -----------------------------------------------------------*/
+.ContactSection {
+  position: relative;
+  background: var(--Fourth-color);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.ContactSection .Container {
+  display: flex;
+  flex-direction: column;
+}
+.ContactSection .Container .BackgrImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.ContactSection .Container .BlackBackgr {
+  width: 100%;
+  height: 100%;
+  background: var(--Second-color);
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.ContactSection .Container .ContactFormAndInfos {
+  z-index: 3;
+  display: flex;
+}
+.ContactSection .Container .ContactFormAndInfos .ContactForm .SmallCircleOne,
+.ContactSection .Container .ContactFormAndInfos .ContactForm .SmallCircleTwo {
+  background: var(--Primary-color);
+  border: none;
+  width: 7px;
+  height: 7px;
+  z-index: 4;
+}
+.ContactSection .Container .ContactFormAndInfos .ContactForm .SmallCircleThree,
+.ContactSection .Container .ContactFormAndInfos .ContactForm .SmallCircleFour {
+  background: var(--Third-color);
+  border: none;
+  width: 7px;
+  height: 7px;
+  z-index: 4;
+}
+.ContactSection .Container .ContactFormAndInfos .ContactForm .CircleThree {
+  z-index: 4;
+  top: 0;
+  right: -100px;
+  left: unset;
+  border: 40px solid var(--Primary-color);
+  width: 200px;
+  height: 200px;
+}
+.ContactSection .Container .ContactFormAndInfos .ContactForm .BottomRectangle {
+  z-index: 4;
+}
+.ContactSection .Container .ContactFormAndInfos .ContactForm {
+  min-height: 100%;
+  position: relative;
+  width: 50%;
+}
+.ContactSection .Container .ContactFormAndInfos .ContactForm .BlackBackgr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--Fourth-color);
+  opacity: 0.9;
+}
+.ContactSection .Container .ContactFormAndInfos .ContactForm .Form {
+  position: relative;
+  padding: 100px 60px 0px 60px;
+  z-index: 4;
+}
+.ContactSection .Container .ContactFormAndInfos .ContactForm .Form h2 {
+  text-transform: uppercase;
+  color: var(--Primary-color);
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.ContactSection .Container .ContactFormAndInfos .ContactForm .Form .InputBox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.ContactSection .Container .ContactFormAndInfos .ContactForm .Form .InputBox:last-child {
+  margin-bottom: 0px;
+}
+.ContactSection .Container .ContactFormAndInfos .ContactForm .Form .InputBox input {
+  color: var(--Fifth-color);
+}
+.ContactSection .Container .ContactFormAndInfos .ContactForm .Form .InputBox .InputBorder {
+  text-decoration: none;
+  width: 100%;
+  background: transparent;
+  color: var(--Fifth-color);
+  font-size: 15px;
+  font-weight: 300;
+  border: none;
+  border-bottom: 1px solid var(--Fifth-color);
+  outline: none;
+  resize: none;
+  margin-top: 10px;
+}
+.ContactSection .Container .ContactFormAndInfos .ContactForm .Form .InputBox label {
+  font-size: 15px;
+  color: var(--Fifth-color);
+  font-weight: 300;
+}
+.ContactSection .Container .ContactFormAndInfos .ContactForm .Form .InputBox label span {
+  color: red;
+}
+.Erreur {
+  color: red;
+  display: none;
+  padding: 10px 0px;
+}
+.Erreur i {
+  color: red;
+  margin-right: 5px;
+}
+.ContactSection .Container .ContactFormAndInfos .ContactForm .Form .InputBox .Submit {
+  background: var(--Primary-color);
+  font-family: "Poppins", sans-serif;
+  padding: 12px 26px;
+  border: none;
+  width: max-content;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--Second-color);
+}
+.NomEntrepriseVide.Show,
+.NomCompletVide.Show,
+.NomCompletNonValide.Show,
+.NewsletterErreur.Show,
+.Prenom.Show,
+.Message.Show,
+.Email.Show {
+  display: block;
+}
+.ModalContainer,
+.ModalContainerNL {
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  visibility: hidden;
+}
+.ModalContainer.Show,
+.ModalContainerNL.Show {
+  visibility: visible;
+  z-index: 5;
+}
+.Modal,
+.ModalNL {
+  opacity: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 30px 50px;
+  border-radius: 2px;
+  background: var(--Second-color);
+  width: 600px;
+  text-align: center;
+}
+.ModalNL h1,
+.Modal h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 25px;
+  color: var(--Primary-color);
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--Primary-color);
+  width: 100%;
+  font-weight: 500;
+}
+
+.Modal p,
+.ModalNL p {
+  color: var(--Fifth-color);
+  font-weight: 400;
+  text-align: left;
+  font-size: 15px;
+  padding: 20px 0px;
+}
+.Modal button,
+.ModalNL button {
+  background: var(--Primary-color);
+  border: none;
+  border-radius: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+  padding: 7px 35px;
+  color: var(--text-white-color);
+  cursor: pointer;
+  outline: none;
+}
+.ContactSectionSocialMedia {
+  z-index: 6;
+  padding: 30px 60px 100px 60px;
+  position: relative;
+}
+.ContactSectionSocialMedia ul {
+  display: flex;
+}
+.ContactSectionSocialMedia ul li {
+  list-style: none;
+  margin-right: 10px;
+}
+.ContactSectionSocialMedia ul li a i {
+  color: var(--Fifth-color);
+}
+
+.ContactSection .Container .ContactFormAndInfos .Infos {
+  min-height: 100%;
+  width: 50%;
+  padding: 100px 60px;
+  display: flex;
+  flex-direction: column;
+}
+.Infos h2 {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--Third-color);
+  text-transform: uppercase;
+}
+.Infos h2 span {
+  color: var(--Primary-color);
+}
+.Infos p {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--Third-color);
+  margin: auto 0;
+}
+.Infos .AdressEmailMobile {
+  margin-top: auto;
+}
+.Infos .AdressBox,
+.Infos .EmailBox,
+.Infos .MobileBox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+.Infos .AdressBox .AdressTitle,
+.Infos .EmailBox .EmailTitle,
+.Infos .MobileBox .MobileTitle {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--Fifth-color);
+}
+.Infos .AdressBox .Adress,
+.Infos .EmailBox .Email,
+.Infos .MobileBox .Mobile {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--Third-color);
+}
+.ContactSection .Container .Quote {
+  position: relative;
+  z-index: 3;
+  padding: 20px 60px;
+}
+.ContactSection .Container .Quote .OrangeBackgr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--Primary-color);
+  opacity: 0.55;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+}
+.ContactSection .Container .Quote p {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--Third-color);
+  z-index: 4;
+  position: relative;
+  text-align: center;
+}
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .ContactSection .Container .ContactFormAndInfos {
+    flex-direction: column;
+  }
+  .ContactSection .Container .ContactFormAndInfos .Infos {
+    width: 100%;
+    padding: 100px 15px;
+  }
+  .ContactSection .Container .ContactFormAndInfos .ContactForm {
+    width: 100%;
+  }
+  .ContactSection .Container .ContactFormAndInfos .ContactForm .Form {
+    padding: 100px 15px 0px 15px;
+  }
+  .ContactSection .Container .ContactFormAndInfos .ContactForm .Form h2 {
+    font-size: 20px;
+  }
+  .Infos h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .ContactSectionSocialMedia {
+    padding: 30px 15px;
+  }
+  .ContactSection .Container .Quote {
+    padding: 20px 0px;
+  }
+  .Modal,
+  .ModalNL {
+    padding: 30px 15px;
+  }
+}
+/* Medium devices */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .ContactSection .Container .ContactFormAndInfos .ContactForm .Form,
+  .ContactSection .Container .ContactFormAndInfos .Infos {
+    padding: 100px 15px;
+  }
+  .ContactSectionSocialMedia {
+    padding: 30px 15px;
+  }
+  .ContactSection .Container .ContactFormAndInfos .ContactForm .Form h2 {
+    font-size: 20px;
+  }
+  .Infos h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 992px) {
+}
+/* Extra large devices */
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+}
+/*--------------------------------------------------------------- FOOTER SECTION  -----------------------------------------------------------*/
+.FooterSection {
+  position: relative;
+  background: var(--Sixth-color);
+  display: flex;
+  justify-content: space-between;
+  min-height: 100%;
+}
+.FooterSection .Map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.FooterSection .BlackBackgr {
+  position: absolute;
+  background: var(--Fourth-color);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+.FirstHashtag,
+.Newsletter {
+  width: 20%;
+  z-index: 5;
+}
+.AcceeRapide,
+.FooterContact,
+.HoraireDouverture {
+  z-index: 5;
+  width: max-content;
+}
+.FirstHashtag h1,
+.AcceeRapide h1,
+.FooterContact h1,
+.HoraireDouverture h1,
+.Newsletter h1 {
+  color: var(--Third-color);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 17px;
+}
+.FirstHashtag h1 span,
+.AcceeRapide h1 span,
+.FooterContact h1 span,
+.HoraireDouverture h1 span,
+.Newsletter h1 span {
+  color: var(--Primary-color);
+  font-size: 17px;
+}
+
+.FirstHashtag p {
+  font-size: 14px;
+  color: var(--Fifth-color);
+  font-weight: 300;
+  padding: 10px 0;
+}
+.FirstHashtag .FooterSectionSocialMedia {
+  padding: 10px 0px;
+}
+.FirstHashtag .FooterSectionSocialMedia ul {
+  display: flex;
+  justify-content: space-between;
+}
+.FirstHashtag .FooterSectionSocialMedia ul li {
+  list-style: none;
+  background: var(--Sixth-color);
+  padding: 6px 12px;
+}
+.FirstHashtag .FooterSectionSocialMedia ul li a {
+  text-decoration: none;
+}
+.FirstHashtag .FooterSectionSocialMedia ul li a i {
+  font-size: 15px;
+  color: var(--Primary-color);
+}
+.AcceeRapide {
+  padding-left: 0px;
+}
+.AcceeRapide ul {
+  margin-top: 5px;
+}
+.AcceeRapide ul li {
+  list-style: none;
+  padding: 5px 0px;
+}
+.AcceeRapide ul li a {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--Fifth-color);
+}
+.AcceeRapide ul li a:hover {
+  color: var(--Primary-color);
+}
+.AcceeRapide ul li a i {
+  color: var(--Primary-color);
+  margin-right: 5px;
+}
+.FooterContact .AdressBox .Icon,
+.FooterContact .EmailBox .Icon,
+.FooterContact .MobileBox .Icon {
+  color: var(--Primary-color);
+  font-size: 14px;
+  margin-right: 5px;
+}
+.FooterContact .AdressBox .Adress,
+.FooterContact .EmailBox .Email,
+.FooterContact .MobileBox .Mobile {
+  color: var(--Fifth-color);
+  font-size: 14px;
+  font-weight: 300;
+}
+.FooterContact .AdressBox {
+  margin-top: 5px;
+}
+.FooterContact .AdressBox,
+.FooterContact .EmailBox,
+.FooterContact .MobileBox {
+  padding: 5px 0px;
+}
+.HoraireDouverture .TimeBox {
+  padding: 5px 0px;
+}
+.HoraireDouverture h4 {
+  margin-bottom: 5px;
+}
+.HoraireDouverture .TimeBox .Icon {
+  color: var(--Primary-color);
+  font-size: 14px;
+  margin-right: 5px;
+}
+.HoraireDouverture .TimeBox .Time {
+  color: var(--Fifth-color);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.Newsletter p {
+  color: var(--Fifth-color);
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 5px;
+  padding: 5px 0px;
+}
+.Newsletter form #user-email {
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 0.01px solid var(--Fifth-color);
+  color: var(--Fifth-color);
+  width: 100%;
+  display: flex;
+}
+.NewletterSubmit {
+  padding: 4px 10px;
+  border: none;
+  background: var(--Primary-color);
+  color: var(--Second-color);
+  font-size: 13px;
+  font-weight: 400;
+}
+.NewletterSubmit i {
+  color: var(--Second-color);
+  font-size: 14px;
+}
+.UserEmail {
+  display: flex;
+}
+.Newsletter .TermsBox .TermsIcon i {
+  color: var(--Primary-color);
+  font-size: 14px;
+  margin-right: 5px;
+}
+.Newsletter .TermsBox .Terms {
+  color: var(--Fifth-color);
+  font-size: 14px;
+  font-weight: 300;
+}
+.NewsletterErreur {
+  color: red;
+  font-size: 14px;
+  font-weight: 300;
+  display: none;
+}
+.NewsletterErreur i {
+  margin-right: 5px;
+}
+.NewsletterBox {
+  display: flex;
+}
+.NewsletterBox .button {
+  cursor: pointer;
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .FooterSection {
+    display: block;
+    position: relative;
+  }
+  .FirstHashtag .FooterSectionSocialMedia ul {
+    display: flex;
+    justify-content: unset;
+  }
+  .FirstHashtag .FooterSectionSocialMedia ul li {
+    margin-right: 10px;
+  }
+  .FirstHashtag,
+  .AcceeRapide,
+  .FooterContact,
+  .HoraireDouverture,
+  .Newsletter {
+    z-index: 6;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .AcceeRapide {
+    padding-left: 0px;
+  }
+  .FooterSection .Map {
+    height: 100%;
+  }
+}
+/* Medium devices */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .FooterSection {
+    position: relative;
+    display: block;
+  }
+  .FirstHashtag p {
+    background: red;
+    width: 100%;
+  }
+  .FirstHashtag,
+  .AcceeRapide,
+  .FooterContact,
+  .HoraireDouverture,
+  .Newsletter {
+    z-index: 6;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .FooterSection .Map {
+    height: 100%;
+  }
+  .AcceeRapide {
+    padding-left: 0px;
+  }
+  .FirstHashtag .FooterSectionSocialMedia ul {
+    display: flex;
+    justify-content: unset;
+  }
+  .FirstHashtag .FooterSectionSocialMedia ul li {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 992px) {
+}
+/* Extra large devices */
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+  .FirstHashtag,
+  .AcceeRapide,
+  .FooterContact,
+  .HoraireDouverture,
+  .Newsletter {
+    padding-left: 10px;
+  }
+}
+
+/*--------------------------------------------------------------- COPYRIGHTS SECTION  -----------------------------------------------------------*/
+
+.Copyrights {
+  background: #111;
+  color: var(--Fifth-color);
+  padding: 30px 60px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 300;
+  width: 100%;
+  z-index: 9;
+  position: relative;
+}
+.Copyrights .Content {
+  display: flex;
+  flex-direction: row;
+}
+.Copyrights .Content a {
+  color: var(--Fifth-color);
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: none;
+  margin-left: auto;
+}
+.Copyrights .Content a:hover {
+  color: var(--Primary-color);
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .Copyrights {
+    padding: 30px 15px;
+  }
+  .Copyrights .Content {
+    display: flex;
+    flex-direction: column;
+  }
+  .Copyrights .Content span {
+    text-align: center;
+  }
+  .Copyrights .Content a {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+/* Medium devices */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .Copyrights {
+    padding: 30px 15px;
+  }
+}
+@media (max-width: 992px) {
+}
+/* Extra large devices */
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+}
