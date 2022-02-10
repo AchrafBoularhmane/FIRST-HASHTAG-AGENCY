@@ -1,0 +1,1244 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+
+:root {
+  --Primary-color: #ff6600;
+  --Second-color: #000;
+  --Third-color: #fff;
+  --Fourth-color: #141414;
+  --Fifth-color: #adadad;
+  --Sixth-color: #141414f8;
+}
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.StopScrolling {
+  overflow: hidden;
+}
+::-webkit-scrollbar {
+  width: 11px;
+  background-color: var(--Second-color);
+}
+::-webkit-scrollbar-thumb {
+  height: 200px;
+  background: var(--Primary-color);
+}
+input[type="submit"] {
+  font-family: "Font Awesome 5 Free";
+  font-size: 11px;
+  border: none;
+  font-weight: 900;
+  padding: 5px;
+  color: var(--Second-color);
+  background-color: var(--Primary-color);
+}
+.BackToTop {
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 1;
+  z-index: 1000000000000000000;
+  background: var(--Primary-color);
+}
+.BackToTop svg {
+  color: var(--Second-color);
+  width: 50px;
+  height: 50px;
+}
+.Top {
+  bottom: 40px;
+  visibility: visible;
+  opacity: 1;
+}
+.opacity {
+  opacity: 0.06;
+}
+/*Safari phone numbers detection*/
+a[href^="tel"] {
+  text-decoration: inherit;
+  color: inherit;
+}
+.Ios-link {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+/*---------------------------------------------------------------- HOME SECTION -----------------------------------------------------------*/
+
+.HomeSection {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+.SectionPadding {
+  padding: 100px 60px;
+}
+header {
+  display: flex;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 10px 60px;
+  margin-top: 10px;
+}
+.Logo {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.Logo img {
+  width: 120px;
+  height: 100%;
+}
+.Logo span {
+  font-size: 12px;
+  margin-top: 6px;
+  color: var(--Third-color);
+  margin-left: -5px;
+  font-weight: 400;
+}
+.Logo span span {
+  font-weight: 600;
+}
+header .Nav {
+  width: 70%;
+  float: right;
+  display: flex;
+}
+header .Nav ul {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+}
+header .Nav ul li {
+  list-style: none;
+  margin: auto 0;
+}
+header .Nav ul li a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--Third-color);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+header .Nav ul li a:hover {
+  color: var(--Primary-color);
+}
+.Devis {
+  color: var(--Primary-color) !important;
+  border: 1px solid var(--Primary-color);
+  padding: 12px 26px;
+}
+.Devis:hover {
+  background: var(--Second-color);
+  border: 1px solid var(--Second-color);
+}
+
+.VideoContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.VideoContainer video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.BackgColor {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: var(--Second-color);
+  opacity: 0.7;
+}
+.CircleOne {
+  top: -25%;
+  left: -5%;
+  border: 40px solid var(--Primary-color);
+  width: 400px;
+  height: 400px;
+  z-index: 0;
+}
+.CircleTwo {
+  top: -15%;
+  right: -5%;
+  border: 40px solid var(--Primary-color);
+  width: 400px;
+  height: 300px;
+}
+.CircleThree {
+  bottom: -80px;
+  left: -80px;
+  border: 40px solid var(--Primary-color);
+  width: 250px;
+  height: 250px;
+}
+.CircleCrossCommunStyle {
+  position: absolute;
+  background: transparent;
+  border-radius: 50%;
+}
+.SmallCircleOne {
+  top: 18%;
+  left: 45%;
+  border: 3px solid var(--Primary-color);
+  width: 15px;
+  height: 15px;
+}
+.SmallCircleTwo {
+  bottom: 5%;
+  left: 30%;
+  border: 3px solid var(--Third-color);
+  width: 15px;
+  height: 15px;
+}
+.SmallCircleThree {
+  bottom: 8%;
+  right: 47%;
+  border: 3px solid var(--Third-color);
+  width: 15px;
+  height: 15px;
+}
+.SmallCircleFour {
+  top: 22%;
+  right: 5%;
+  background: var(--Third-color);
+  width: 10px;
+  height: 10px;
+}
+.CrossOne {
+  right: 25%;
+  top: 13%;
+  width: 10px;
+  height: 10px;
+}
+.CrossTwo {
+  right: 25%;
+  bottom: 13%;
+  width: 10px;
+  height: 10px;
+}
+.CrossThree {
+  left: 25%;
+  bottom: 17%;
+  width: 10px;
+  height: 10px;
+}
+
+.CrossBefore:before,
+.CrossAfter:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 15px;
+  width: 4px;
+  background-color: var(--Primary-color);
+}
+.CrossBefore:before {
+  transform: rotate(45deg);
+}
+.CrossAfter:after {
+  transform: rotate(-45deg);
+}
+
+.LandingPageDescription {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: auto;
+  z-index: 1;
+}
+.LandingPageDescriptionContainer {
+  display: flex;
+  width: 100%;
+}
+.DescriptionPart {
+  position: relative;
+  width: 80%;
+  height: 100%;
+}
+.LandingPageDescription .MarketingAgency {
+  position: relative;
+  width: 10%;
+  writing-mode: vertical-lr;
+  display: flex;
+}
+.LandingPageDescription .MarketingAgency span {
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 13px;
+  color: var(--Third-color);
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 0 20px;
+}
+.LandingPageDescription .MarketingAgency span span {
+  color: var(--Primary-color);
+}
+.LandingPageDescription .DescriptionPart .Rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--Primary-color);
+}
+.LandingPageDescription .DescriptionPart .Welcome {
+  color: var(--Third-color);
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: normal;
+  display: inline-block;
+  margin-top: 12px;
+}
+.LandingPageDescription .DescriptionPart span span {
+  color: var(--Primary-color);
+}
+.LandingPageDescription .DescriptionPart h1 {
+  color: var(--Third-color);
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.LandingPageDescription .DescriptionPart h1 span {
+  color: var(--Primary-color);
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.LandingPageDescription .DescriptionPart .Date {
+  display: flex;
+  width: max-content;
+}
+.LandingPageDescription .DescriptionPart .Date p {
+  color: var(--Third-color);
+  font-size: 12px;
+  text-align: left;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.LandingPageDescription .DescriptionPart .Date p span {
+  color: var(--Primary-color);
+  font-weight: 500;
+}
+.LandingPageDescription .DescriptionPart .Date .Rec {
+  height: 4px;
+  width: 20px;
+  background: var(--Primary-color);
+  margin: auto;
+  margin-right: 10px;
+}
+.LandingPageSocialMedia {
+  position: relative;
+  width: 10%;
+  padding: 0 20px;
+}
+.LandingPageSocialMedia ul {
+  padding-bottom: 10px;
+}
+.LandingPageSocialMedia ul li {
+  border-radius: 50%;
+  border: 1px solid var(--Third-color);
+  text-align: center;
+  list-style: none;
+  margin-bottom: 7px;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+}
+.LandingPageSocialMedia ul li:hover {
+  background: var(--Primary-color);
+  border: 1px solid var(--Primary-color);
+}
+.LandingPageSocialMedia ul li:nth-child(2) {
+  background: var(--Primary-color);
+  border: 1px solid var(--Primary-color);
+}
+.LandingPageSocialMedia ul li:last-child {
+  margin-bottom: 0px;
+}
+.LandingPageSocialMedia ul li a {
+  text-decoration: none;
+  display: flex;
+  margin: auto;
+}
+.LandingPageSocialMedia ul li a i {
+  color: var(--Third-color);
+  font-size: 12px;
+  margin: auto;
+}
+.LandingPageSocialMedia .Rectangle {
+  width: 25px;
+  display: flex;
+}
+.LandingPageSocialMedia .Rectangle span {
+  width: 3px;
+  height: 60px;
+  background: var(--Primary-color);
+  display: block;
+  margin: auto;
+}
+.LandingPageSocialMedia .SuivezNous {
+  height: 100%;
+  min-width: 25px;
+  margin-top: 10px;
+  text-align: center;
+}
+.LandingPageSocialMedia .SuivezNous span {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--Third-color);
+  writing-mode: vertical-lr;
+  display: block;
+  text-align: center;
+}
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .SectionPadding {
+    padding: 100px 15px;
+  }
+  .LandingPageSocialMedia {
+    width: 5%;
+    padding: 0 0px;
+    margin-left: 5px;
+  }
+  .LandingPageSocialMedia ul li {
+    width: 14px;
+    height: 14px;
+  }
+  .LandingPageSocialMedia ul li a i {
+    font-size: 7px;
+  }
+  .LandingPageSocialMedia .Rectangle {
+    width: 15px;
+    display: flex;
+  }
+  .LandingPageSocialMedia .Rectangle span {
+    width: 1px;
+    height: 40px;
+    background: var(--Primary-color);
+    display: block;
+    margin: auto;
+  }
+
+  .LandingPageSocialMedia .SuivezNous span {
+    font-size: 8px;
+  }
+
+  .LandingPageDescription .MarketingAgency {
+    width: 5%;
+    margin-right: 5px;
+  }
+  .LandingPageDescription .MarketingAgency span {
+    padding: 0 0px;
+    font-size: 8px;
+  }
+  .DescriptionPart {
+    width: 90%;
+    padding: 0 10px;
+  }
+  .LandingPageDescription .DescriptionPart h1,
+  .LandingPageDescription .DescriptionPart h1 span {
+    font-size: 24px;
+  }
+
+  .LandingPageDescription .DescriptionPart .Rectangle {
+    width: 30px;
+    height: 1px;
+    margin-left: 10px;
+  }
+  .LandingPageDescription .DescriptionPart .Welcome {
+    font-size: 8px;
+    margin-top: 4px;
+  }
+  .CircleOne {
+    display: none;
+  }
+  .CircleTwo {
+    top: -80px;
+    right: -80px;
+    border: 40px solid var(--Primary-color);
+    width: 250px;
+    height: 250px;
+  }
+}
+/* Medium devices */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .SectionPadding {
+    padding: 100px 15px;
+  }
+  .LandingPageSocialMedia {
+    width: 10%;
+  }
+  .DescriptionPart {
+    width: 80%;
+  }
+  .LandingPageDescription .DescriptionPart h1,
+  .LandingPageDescription .DescriptionPart h1 span {
+    font-size: 35px;
+  }
+  .LandingPageDescription .MarketingAgency {
+    width: 10%;
+  }
+  .CircleTwo {
+    top: -80px;
+    right: -80px;
+    border: 40px solid var(--Primary-color);
+    width: 300px;
+    height: 250px;
+  }
+  .CircleOne {
+    top: -80px;
+    left: -80px;
+    border: 40px solid var(--Primary-color);
+    width: 300px;
+    height: 250px;
+  }
+}
+@media (max-width: 992px) {
+  .HomeSection {
+    min-height: 100vh;
+  }
+  .LandingPageDescription {
+    height: max-content;
+  }
+  header {
+    padding: 0;
+    height: max-content;
+    margin-top: 0;
+  }
+  .Logo {
+    padding: 10px;
+  }
+  .Logo img {
+    width: 90px;
+    height: 100%;
+  }
+  .Logo span {
+    font-size: 10px;
+    margin-top: 6px;
+    color: var(--Third-color);
+    margin-left: -5px;
+    font-weight: 400;
+  }
+  .Toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 4;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .Toggle span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: var(--Primary-color);
+    width: 45px;
+    height: 2.5px;
+    transition: 0.6s;
+  }
+  .Toggle .One {
+    top: 0;
+  }
+  .Toggle .Two,
+  .Toggle .Three {
+    top: 16px;
+    background: var(--Third-color);
+    width: 40px;
+  }
+  .Toggle .Four {
+    top: 30px;
+    background: var(--Primary-color);
+    width: 35px;
+  }
+  .ShowHamburgerIcon {
+    padding: 18px 19px;
+  }
+  .ShowHamburgerIcon .One,
+  .ShowHamburgerIcon .Four {
+    display: none;
+  }
+  .ShowHamburgerIcon .Two {
+    transform: rotate(45deg);
+    width: 38px;
+    background: var(--Third-color);
+    transition: 2s;
+  }
+  .ShowHamburgerIcon .Three {
+    transform: rotate(-45deg);
+    width: 38px;
+    background: var(--Primary-color);
+    transition: 2s;
+  }
+  .ShowMobileMenu {
+    display: block;
+  }
+  header .Nav {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--Second-color);
+    display: none;
+    z-index: 1 !important;
+  }
+  header .Nav.Active {
+    display: flex;
+  }
+  header .Nav ul {
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  header .Nav ul li {
+    padding: 30px 0;
+  }
+
+  header .Nav ul li a {
+    margin: 0;
+    display: block;
+    text-align: center;
+  }
+  .Active {
+    color: var(--Third-color);
+  }
+  .Devis {
+    border: none;
+    padding: 0;
+    color: var(--Primary-color) !important;
+  }
+}
+/* Extra large devices */
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+  .LandingPageSocialMedia {
+    width: 15%;
+  }
+  .DescriptionPart {
+    width: 70%;
+  }
+  .LandingPageDescription .DescriptionPart h1,
+  .LandingPageDescription .DescriptionPart h1 span {
+    font-size: 35px;
+  }
+  .LandingPageDescription .MarketingAgency {
+    width: 15%;
+  }
+  .Logo {
+    width: 20%;
+  }
+  header .Nav {
+    width: 80%;
+  }
+  .CircleTwo {
+    top: -80px;
+    right: -80px;
+    border: 40px solid var(--Primary-color);
+    width: 400px;
+    height: 250px;
+  }
+  .CircleOne {
+    top: -80px;
+    left: -80px;
+    border: 40px solid var(--Primary-color);
+    width: 400px;
+    height: 250px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .FixNavbar {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    margin-top: 0px;
+    height: max-content;
+    z-index: 100000000000000000000000000000000000000000000000000000000;
+    background: rgba(1, 1, 1, 0.808);
+  }
+  .FixNavbar .Nav ul li .Devis:hover {
+    background-color: var(--Primary-color);
+    color: var(--Second-color) !important;
+  }
+}
+/*--------------------------------------------------------------- ACTUALITE SECTION  -----------------------------------------------------------*/
+.ActualiteSection {
+  position: relative;
+  background: var(--Second-color);
+  justify-content: space-between;
+  min-height: 100%;
+  width: 100%;
+}
+.ActualiteSection .CircleThree {
+  z-index: 0;
+  border: 28px solid var(--Fifth-color);
+  width: 180px;
+  height: 180px;
+}
+.ActualiteContainer {
+  position: relative;
+  background: var(--Fourth-color);
+  margin-top: -200px;
+  padding: 100px;
+  z-index: 0;
+  height: 100%;
+}
+.ActualiteContainer .ActualitePicture {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 50px;
+}
+.ActualiteContainer .ActualitePicture img {
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+  height: 500px;
+  z-index: 2;
+}
+.ActualiteContainer .ActualitePicture .ActualiteType {
+  background: var(--Primary-color);
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  z-index: 10 !important;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 20px;
+  border-radius: 50%;
+}
+.ActualiteContainer .ActualitePicture .Rectangle {
+  background: var(--Primary-color);
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  width: 200px;
+  height: 40px;
+  z-index: 0;
+}
+.ActualiteContainer .ActualitePicture .Rectangle2 {
+  background: var(--Primary-color);
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  z-index: 0;
+}
+.ActualiteContainer .ActualitePicture .ActualiteDate {
+  background: var(--Primary-color);
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: 10 !important;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 5px;
+}
+.ActualiteContainer p,
+.ActualiteContainer .FirstP {
+  font-size: 14px;
+  color: var(--Fifth-color);
+  font-weight: 300;
+}
+.ActualiteContainer .FirstP::first-letter {
+  font-size: 200%;
+  color: var(--Primary-color);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.ActualiteContainer h2 {
+  color: var(--Primary-color);
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px 0px;
+}
+.ActualiteContainer h3 {
+  font-size: 16px;
+  color: var(--Third-color);
+  font-weight: 400;
+}
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .ActualiteContainer {
+    padding: 40px 15px;
+  }
+  .ActualiteContainer .ActualitePicture {
+    height: 300px;
+  }
+  .ActualiteContainer .ActualitePicture img {
+    height: 300px;
+  }
+  .ActualiteContainer .ActualitePicture .Rectangle {
+    right: -10px;
+    bottom: -10px;
+    height: 20px;
+  }
+  .ActualiteContainer .ActualitePicture .Rectangle2 {
+    left: -5px;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+  }
+  .ActualiteContainer .ActualitePicture .ActualiteType {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px;
+  }
+  .ActualiteContainer h2 {
+    color: var(--Primary-color);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 0px;
+  }
+  .ActualiteContainer h3 {
+    font-size: 15px;
+    color: var(--Third-color);
+    font-weight: 400;
+  }
+}
+/* Medium devices */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .ActualiteContainer {
+    padding: 40px 15px;
+    min-height: 100%;
+  }
+}
+@media (max-width: 992px) {
+}
+/* Extra large devices */
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+}
+
+/*--------------------------------------------------------------- FOOTER SECTION  -----------------------------------------------------------*/
+.FooterSection {
+  position: relative;
+  background: var(--Sixth-color);
+  display: flex;
+  justify-content: space-between;
+  min-height: 100%;
+  width: 100%;
+}
+.FooterSection .Map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.FooterSection .BlackBackgr {
+  position: absolute;
+  background: var(--Fourth-color);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+.FirstHashtag,
+.Newsletter {
+  width: 20%;
+  z-index: 5;
+}
+.AcceeRapide,
+.FooterContact,
+.HoraireDouverture {
+  z-index: 5;
+  width: max-content;
+}
+.FirstHashtag h1,
+.AcceeRapide h1,
+.FooterContact h1,
+.HoraireDouverture h1,
+.Newsletter h1 {
+  color: var(--Third-color);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 17px;
+}
+.FirstHashtag h1 span,
+.AcceeRapide h1 span,
+.FooterContact h1 span,
+.HoraireDouverture h1 span,
+.Newsletter h1 span {
+  color: var(--Primary-color);
+  font-size: 17px;
+}
+
+.FirstHashtag p {
+  font-size: 14px;
+  color: var(--Fifth-color);
+  font-weight: 300;
+  padding: 10px 0;
+}
+.FirstHashtag .FooterSectionSocialMedia {
+  padding: 10px 0px;
+}
+.FirstHashtag .FooterSectionSocialMedia ul {
+  display: flex;
+  justify-content: space-between;
+}
+.FirstHashtag .FooterSectionSocialMedia ul li {
+  list-style: none;
+  background: var(--Sixth-color);
+  padding: 6px 12px;
+}
+.FirstHashtag .FooterSectionSocialMedia ul li a {
+  text-decoration: none;
+}
+.FirstHashtag .FooterSectionSocialMedia ul li a i {
+  font-size: 15px;
+  color: var(--Primary-color);
+}
+.AcceeRapide {
+  padding-left: 0px;
+}
+.AcceeRapide ul {
+  margin-top: 5px;
+}
+.AcceeRapide ul li {
+  list-style: none;
+  padding: 5px 0px;
+}
+.AcceeRapide ul li a {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--Fifth-color);
+}
+.AcceeRapide ul li a:hover {
+  color: var(--Primary-color);
+}
+.AcceeRapide ul li a i {
+  color: var(--Primary-color);
+  margin-right: 5px;
+}
+.FooterContact .AdressBox .Icon,
+.FooterContact .EmailBox .Icon,
+.FooterContact .MobileBox .Icon {
+  color: var(--Primary-color);
+  font-size: 14px;
+  margin-right: 5px;
+}
+.FooterContact .AdressBox .Adress,
+.FooterContact .EmailBox .Email,
+.FooterContact .MobileBox .Mobile {
+  color: var(--Fifth-color);
+  font-size: 14px;
+  font-weight: 300;
+}
+.FooterContact .AdressBox {
+  margin-top: 5px;
+}
+.FooterContact .AdressBox,
+.FooterContact .EmailBox,
+.FooterContact .MobileBox {
+  padding: 5px 0px;
+}
+.HoraireDouverture .TimeBox {
+  padding: 5px 0px;
+}
+.HoraireDouverture h4 {
+  margin-bottom: 5px;
+}
+.HoraireDouverture .TimeBox .Icon {
+  color: var(--Primary-color);
+  font-size: 14px;
+  margin-right: 5px;
+}
+.HoraireDouverture .TimeBox .Time {
+  color: var(--Fifth-color);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.Newsletter p {
+  color: var(--Fifth-color);
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 5px;
+  padding: 5px 0px;
+}
+.Newsletter form #user-email {
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 0.01px solid var(--Fifth-color);
+  color: var(--Fifth-color);
+  width: 100%;
+  display: flex;
+}
+.NewletterSubmit {
+  padding: 4px 10px;
+  border: none;
+  background: var(--Primary-color);
+  color: var(--Second-color);
+  font-size: 13px;
+  font-weight: 400;
+}
+.NewletterSubmit i {
+  color: var(--Second-color);
+  font-size: 14px;
+}
+.UserEmail {
+  display: flex;
+}
+.Newsletter .TermsBox .TermsIcon i {
+  color: var(--Primary-color);
+  font-size: 14px;
+  margin-right: 5px;
+}
+.Newsletter .TermsBox .Terms {
+  color: var(--Fifth-color);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.NewsletterBox {
+  display: flex;
+}
+.NewsletterBox .button {
+  cursor: pointer;
+}
+
+.ModalContainerNL {
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  visibility: hidden;
+}
+
+.ModalContainerNL.Show {
+  visibility: visible;
+  z-index: 5;
+}
+.Modal,
+.ModalNL {
+  opacity: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 30px 50px;
+  border-radius: 2px;
+  background: var(--Second-color);
+  width: 600px;
+  text-align: center;
+}
+.ModalNL h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 25px;
+  color: var(--Primary-color);
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--Primary-color);
+  width: 100%;
+  font-weight: 500;
+}
+
+.ModalNL p {
+  color: var(--Fifth-color);
+  font-weight: 400;
+  text-align: left;
+  font-size: 15px;
+  padding: 20px 0px;
+}
+
+.ModalNL button {
+  background: var(--Primary-color);
+  border: none;
+  border-radius: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+  padding: 7px 35px;
+  color: var(--text-white-color);
+  cursor: pointer;
+  outline: none;
+}
+.NewsletterErreur {
+  color: red;
+  font-size: 14px;
+  font-weight: 300;
+  display: none;
+}
+.NewsletterErreur i {
+  margin-right: 5px;
+}
+.NewsletterErreur.Show {
+  display: block;
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .FooterSection {
+    display: block;
+    position: relative;
+  }
+  .FirstHashtag .FooterSectionSocialMedia ul {
+    display: flex;
+    justify-content: unset;
+  }
+  .FirstHashtag .FooterSectionSocialMedia ul li {
+    margin-right: 10px;
+  }
+  .FirstHashtag,
+  .AcceeRapide,
+  .FooterContact,
+  .HoraireDouverture,
+  .Newsletter {
+    z-index: 6;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .AcceeRapide {
+    padding-left: 0px;
+  }
+  .FooterSection .Map {
+    height: 100%;
+  }
+  .ModalNL {
+    padding: 30px 15px;
+  }
+}
+/* Medium devices */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .FooterSection {
+    position: relative;
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .FirstHashtag,
+  .AcceeRapide,
+  .FooterContact,
+  .HoraireDouverture,
+  .Newsletter {
+    z-index: 6;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .FooterSection .Map {
+    height: 100%;
+  }
+  .AcceeRapide {
+    padding-left: 0px;
+  }
+  .FirstHashtag .FooterSectionSocialMedia ul {
+    display: flex;
+    justify-content: unset;
+  }
+  .FirstHashtag .FooterSectionSocialMedia ul li {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 992px) {
+}
+/* Extra large devices */
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+  .FooterSection {
+    width: 100%;
+  }
+  .FirstHashtag,
+  .AcceeRapide,
+  .FooterContact,
+  .HoraireDouverture,
+  .Newsletter {
+    padding-left: 10px;
+  }
+}
+
+/*--------------------------------------------------------------- COPYRIGHTS SECTION  -----------------------------------------------------------*/
+
+.Copyrights {
+  background: #111;
+  color: var(--Fifth-color);
+  padding: 30px 60px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 300;
+  width: 100%;
+  z-index: 9;
+  position: relative;
+}
+.Copyrights .Content {
+  display: flex;
+  flex-direction: row;
+}
+.Copyrights .Content a {
+  color: var(--Fifth-color);
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: none;
+  margin-left: auto;
+}
+.Copyrights .Content a:hover {
+  color: var(--Primary-color);
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .Copyrights {
+    padding: 30px 15px;
+  }
+  .Copyrights .Content {
+    display: flex;
+    flex-direction: column;
+  }
+  .Copyrights .Content span {
+    text-align: center;
+  }
+  .Copyrights .Content a {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+/* Medium devices */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .Copyrights {
+    padding: 30px 15px;
+  }
+}
+@media (max-width: 992px) {
+}
+/* Extra large devices */
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+}
